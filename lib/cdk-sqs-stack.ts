@@ -11,6 +11,5 @@ export class CdkSqsStack extends cdk.Stack {
       websiteIndexDocument: 'index.html',
       publicReadAccess: true
     });
-
   }
 }

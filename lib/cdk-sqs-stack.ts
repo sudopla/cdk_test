@@ -7,7 +7,7 @@ export class CdkSqsStack extends cdk.Stack {
 
     // The code that defines your stack goes here
     const websiteBucket = new s3.Bucket(this, 'WebBucket', {
-      bucketName: 'CDKBUCKETTEST',
+      bucketName: 'cdk-jpla-bucket',
       websiteIndexDocument: 'index.html',
       publicReadAccess: true
     });

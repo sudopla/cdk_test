@@ -10,6 +10,6 @@ phases:
     commands:
       # Builds the CDK App so it can be synthesized
       - npm run build
-      # Synthesizes the CDK App and puts the resulting artifacts into `dist`
+      # Deploy the CDK App
       - npm run cdk -- deploy --require-approval never
 

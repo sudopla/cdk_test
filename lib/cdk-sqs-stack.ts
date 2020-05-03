@@ -1,5 +1,7 @@
 import * as cdk from '@aws-cdk/core';
-const s3 = require('@aws-cdk/aws-s3');
+import * as s3 from '@aws-cdk/aws-s3';
+import { Queue } from '@aws-cdk/aws-sqs';
+
 
 export class CdkSqsStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
@@ -11,5 +13,10 @@ export class CdkSqsStack extends cdk.Stack {
       websiteIndexDocument: 'index.html',
       publicReadAccess: true
     });
+
+    const queue = new Queue(this, 'queue', {
+      queueName: 'queue'
+    });
+
   }
 }

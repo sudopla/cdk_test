@@ -11,5 +11,5 @@ phases:
       # Builds the CDK App so it can be synthesized
       - npm run build
       # Synthesizes the CDK App and puts the resulting artifacts into `dist`
-      - npm run cdk deploy --require-approval never
+      - npm run cdk -- deploy --require-approval never
 
